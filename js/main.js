@@ -1,5 +1,4 @@
-// Js for toggle menu
-
+// Js for toggle Main Menu
 const menuItems = document.getElementById("menuItems");
   menuItems.style.maxHeight = "0px";
 
@@ -11,19 +10,32 @@ function menutoggle(){
   }
 }
 
-// Js for product gallery
-const productImg = document.getElementById("productImg");
-const smallImg = document.getElementsByClassName("small-img");
+// Js for toggle Form Login-Register
+const loginForm = document.querySelector("#loginForm");
+const regForm = document.querySelector("#regForm");
+const indicator = document.querySelector("#indicator");
 
-smallImg[0].onclick = function(){
-  productImg.src = smallImg[0].src;
+function register(){
+  regForm.style.transform = "translateX(0px)";
+  loginForm.style.transform = "translateX(0px)";
+  indicator.style.transform = "translateX(100px)";
 }
-smallImg[1].onclick = function(){
-  productImg.src = smallImg[1].src;
+
+function login(){
+  regForm.style.transform = "translateX(300px)";
+  loginForm.style.transform = "translateX(300px)";
+  indicator.style.transform = "translateX(0px)";
 }
-smallImg[2].onclick = function(){
-  productImg.src = smallImg[2].src;
+
+/*
+const loginForm = document.getElementById("loginForm");
+  loginForm.style.left = "0px";
+
+function login(){
+  if(loginForm.style.left == "0px"){
+    loginForm.style.left = "-300px";
+  }else{
+    loginForm.style.left = "0px";
+  }
 }
-smallImg[3].onclick = function(){
-  productImg.src = smallImg[3].src;
-}
+*/
