@@ -487,7 +487,366 @@ form p{
   transition: transform 1s;
 }
 
+/* ----- About Page ----- */
+.about-us{
+  width: 100%;
+  background: #f1f1f1;
+  padding: 40px 0;
+}
+.inner-about{
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
+}
+.about-us h1{
+  text-align: center;
+}
+.border{
+  width: 100px;
+  height: 3px;
+  background: #e74c3c;
+  margin: 25px auto;
+}
+.about-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-col{
+  flex: 50%;
+}
+.about{
+  padding-right: 30px;
+}
+.about p{
+  text-align: justify;
+}
+.about a{
+  display: inline-block;
+  color: #e74c3c;
+  text-decoration: none;
+  border-radius: 24px;
+  border: 2px solid #e74c3c;
+  padding: 8px 40px;
+  transition: .4s linear;
+}
+.about a:hover{
+  color: #fff;
+  background: #e74c3c;
+}
+.qualities{
+  padding-left: 30px;
+}
+.quality{
+  margin-bottom: 10px;
+}
+.progress{
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 12px;
+}
+.progress-bar{
+  height: 12px;
+  background: #e74c3c;
+  border-radius: 12px;
+}
+.p1{
+  width: 90%;
+}
+.p2{
+  width: 70%;
+}
+.p3{
+  width: 80%;
+}
+.progress-bar span{
+  float: right;
+  margin-right: 6px;
+  line-height: 13px;
+  color: #fff;
+  font-size: 12px;
+}
+/* ----- Services section ----- */
+.our-services{
+  background: #fff;
+  padding: 60px 0;
+}
+.inner-service{
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
+}
+.title-services{
+  text-align: center;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.service-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service-box{
+  max-width: 33.33%;
+  padding: 10px;
+  text-align: center;
+  color: #555;
+  cursor: pointer;
+}
+.service-icon{
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #e74c3c;
+  color: #e74c3c;
+  transform: rotate(45deg);
+  margin-bottom: 30px;
+  margin-top: 16px;
+  transition: .3s linear;
+}
+.service-icon i{
+  line-height: 70px;
+  transform: rotate(-45deg);
+  font-size: 26px;
+}
+.service-box:hover .service-icon{
+  background: #e74c3c;
+  color: #ddd;
+}
+.title-service{
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.service-desc{
+  font-size: 14px;
+}
+/* ----- Team section ----- */
+.team-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
 
+.our-team{
+  background: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  max-width: 33.33%;
+  padding: 35px;
+  margin: 10px;
+  text-align: center;
+  color: #555;
+  cursor: pointer;
+}
+
+.our-team .pic{
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 0px;
+  z-index: 1;
+  position: relative;
+}
+.our-team .pic::before{
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background: #e74c3c;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: .2;
+  transform: scale(3);
+  transition: all .3s linear 0s;
+}
+.our-team:hover .pic::before{
+  height: 100%;
+}
+.our-team .pic::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #e74c3c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.our-team .pic img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all .9s ease 0s;
+}
+.our-team:hover .pic img{
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(.7);
+}
+.our-team .team-content{
+  margin-bottom: 30px;
+}
+.our-team .title-team{
+  font-size: 22px;
+  font-weight: 700;
+  color: #4e5052;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.our-team .post{
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+}
+.our-team .social-team{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background:#e74c3c;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all .5s ease 0s;
+}
+.our-team:hover .social-team{
+  bottom: 0;
+}
+.our-team .social-team li{
+  display: inline-block;
+}
+.our-team .social-team li a{
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  font-size: 17px;
+  color: #fff;
+  transition: all .3s ease 0s;
+}
+.our-team .social-team li a:hover{
+  color: #e74c3c;
+  background: #f7f5ec;
+}
+
+/* ----- Contact Page ----- */
+.contact-info{
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px #666;
+}
+.contact-map{
+  width: 100%;
+  height: auto;
+  flex: 50%;
+}
+.contact-map iframe{
+  width: 100%;
+  height: 100%;
+}
+.contact-form{
+  width: 100%;
+  height: auto;
+  flex: 50%;
+  text-align: center;
+  padding: 30px;
+}
+.contact-form h1{
+  margin-bottom: 10px;
+}
+.form-input{
+  width: 100%;
+  height: 40px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  border-radius: 50px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.form-input::placeholder{
+  color: #aaa;
+}
+.form-textarea{
+  width: 100%;
+  height: 130px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.form-textarea::placeholder{
+  color: #aaa;
+}
+
+/*--------------*/
+.contact-row{
+  justify-content: center;
+  align-items: center;
+}
+.contact-row .info{
+  font-size: 20px;
+}
+.info .fas{
+  font-size: 30px;
+  margin-right: 20px;
+  color: #4e5052;
+}
+.social{
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  margin: 30px 0 5px 0;
+}
+
+.social li{
+  display: inline-block;
+}
+.social li a{
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  font-size: 30px;
+  color: #4e5052;
+}
+.social li a:hover{
+  color: #e74c3c;
+}
+
+
+/* ----- Media Query for Service ----- */
+@media screen and (max-width: 960px){
+  .service-box{
+    max-width: 45%;
+  }
+  .our-team{
+    max-width: 50%;
+    padding: 70px;
+    margin: 20px;
+  }
+  .contact-info{
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+}
 
 /* ----- Media Query for Menu ----- */
 @media only screen and (max-width: 800px){
@@ -538,6 +897,29 @@ form p{
 
   .cart-info p{
     display: none;
+  }
+
+  .about-col{
+    flex: 100%;
+    margin: 10px 0;
+  }
+  .about, .qualities{
+    padding: 0;
+  }
+  .about{
+    text-align: center;
+  }
+
+  .service-box{
+    max-width: 100%;
+  }
+
+  .team-container{
+    flex-direction: column;
+  }
+  .our-team{
+    max-width: 100%;
+    padding: 90px;
   }
 
 }
